@@ -1,0 +1,39 @@
+{
+  "instance": {
+    "instanceId": "demo-client-one:8082",
+    "app": "demo-client-one",
+    "appGroupName": null,
+    "ipAddr": "127.0.0.1",
+    "sid": "na",
+    "homePageUrl": null,
+    "statusPageUrl": null,
+    "healthCheckUrl": null,
+    "secureHealthCheckUlr": null,
+    "vipAddress": "demo-client-one",
+    "countryId": 1,
+    "dataCenterInfo": {
+      "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+      "name": "MyOwn"
+    },
+    "hostName": "127.0.0.1",
+    "status": "UP",
+    "leaseInfo": null,
+    "isCoordinatingDiscoveryServer": false,
+    "lastUpdatedTimestamp": 1529391461000,
+    "lastDirtyTimestamp": 1529391461000,
+    "actionType": null,
+    "asgName": null,
+    "overridden_status": "UNKNOWN",
+    "port": {
+      "$": 8082,
+      "@enabled": "true"
+    },
+    "securePort": {
+      "$": 7002,
+      "@enabled": "false"
+    },
+    "metadata": {
+      "@class": "java.util.Collections$EmptyMap"
+    }
+  }
+}
