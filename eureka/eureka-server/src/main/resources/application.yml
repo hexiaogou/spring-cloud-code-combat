@@ -1,7 +1,3 @@
-spring:
-  profiles:
-    active: standalone
 eureka:
   server:
-    use-read-only-response-cache: false
-    response-cache-auto-expiration-in-seconds: 10
+    peer-eureka-nodes-update-interval-ms: 10000
