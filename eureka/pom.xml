@@ -19,6 +19,9 @@
         <module>multi-zone-eureka-server</module>
         <module>multi-zone-eureka-client</module>
         <module>multi-zone-zuul-gateway</module>
+        <module>remote-region-eureka-server</module>
+        <module>remote-region-eureka-client</module>
+        <module>remote-region-zuul-gateway</module>
     </modules>
 
     <properties>
