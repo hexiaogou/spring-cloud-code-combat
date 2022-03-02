@@ -24,6 +24,8 @@
         <module>remote-region-zuul-gateway</module>
         <module>http-auth-eureka-server</module>
         <module>http-auth-eureka-client</module>
+        <module>https-auth-eureka-server</module>
+        <module>https-auth-eureka-client</module>
     </modules>
 
     <properties>
