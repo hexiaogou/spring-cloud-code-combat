@@ -2,7 +2,6 @@ package com.jie.controller;
 
 import com.jie.service.HelloFeignUseClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,11 +21,5 @@ public class HelloFeignController {
     @GetMapping(value = "/search/github")
     public String searchGithubRepoStr(@RequestParam("str") String queryStr) {
         return feignUseClient.searchRepo(queryStr);
-    }
-
-
-    @GetMapping(value = "/search/githubGzip")
-    public ResponseEntity<byte []> githubGzip(@RequestParam("str") String queryStr) {
-        return feignUseClient.searchGzipRepo(queryStr);
     }
 }

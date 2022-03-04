@@ -2,8 +2,6 @@ package com.jie.service;
 
 import com.jie.config.HelloFeignServiceConfig;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date 2022/3/3 19:31
  */
 @FeignClient(name = "github-client", url = "https://api.github.com", configuration = HelloFeignServiceConfig.class)
-@Component
 public interface HelloFeignUseClient {
 
     /**search gitHub Repo
@@ -24,12 +21,4 @@ public interface HelloFeignUseClient {
      */
     @RequestMapping(value = "/search/repositories", method = RequestMethod.GET)
     String searchRepo(@RequestParam("q") String queryStr);
-
-    /**
-     * search gitHub Gzip Repo
-     * @param queryStr
-     * @return
-     */
-    @RequestMapping(value = "/search/repositories",method = RequestMethod.GET)
-    ResponseEntity<byte []> searchGzipRepo(@RequestParam("q") String queryStr);
 }
