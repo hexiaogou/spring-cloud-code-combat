@@ -1,7 +1,6 @@
 package com.jie.service;
 
 import com.jie.config.HelloFeignServiceConfig;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
