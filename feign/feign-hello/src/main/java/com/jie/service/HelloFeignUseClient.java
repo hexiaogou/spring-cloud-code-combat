@@ -2,7 +2,6 @@ package com.jie.service;
 
 import com.jie.config.HelloFeignServiceConfig;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
