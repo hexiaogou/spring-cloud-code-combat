@@ -11,6 +11,8 @@
     <modules>
         <module>feign-hello</module>
         <module>feign-gzip</module>
+        <module>feign-httpclient</module>
+        <module>feign-okhttp</module>
     </modules>
 
     <properties>
