@@ -2,6 +2,7 @@ package com.jie.controller;
 
 import com.jie.dto.UserDTO;
 import com.jie.service.UserFeignService;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,16 +18,13 @@ public class UserController {
     @Autowired
     UserFeignService userFeignService;
 
-    @RequestMapping(value = "/search", method = RequestMethod.GET)
-    public String searchUser(@RequestParam(value = "id") Long id,
-                             @RequestParam(value = "name") String name,
-                             @RequestParam(value = "age") Integer age) {
-        UserDTO user = new UserDTO(id, name, age);
+    @RequestMapping(value = "/search", method = RequestMethod.POST)
+    public String searchUser(@RequestBody @ApiParam(name = "用户", value = "传入json格式", required = true) UserDTO user) {
         return userFeignService.searchUser(user);
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addUser(@RequestBody UserDTO user) {
+    public String addUser(@RequestBody @ApiParam(name = "用户", value = "传入json格式", required = true) UserDTO user) {
         return userFeignService.addUser(user);
     }
 }
