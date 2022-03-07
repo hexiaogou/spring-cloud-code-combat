@@ -13,9 +13,11 @@
         <module>feign-gzip</module>
         <module>feign-httpclient</module>
         <module>feign-okhttp</module>
-        <module>feign-erueka-server</module>
+        <module>feign-eureka-server</module>
         <module>consumer</module>
         <module>provider</module>
+        <module>feign-upload-client</module>
+        <module>feign-file-server</module>
     </modules>
 
     <properties>
