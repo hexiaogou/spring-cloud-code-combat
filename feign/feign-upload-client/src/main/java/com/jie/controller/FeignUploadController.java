@@ -23,10 +23,9 @@ public class FeignUploadController {
     @Autowired
     FileUploadFeignService uploadFeignService;
 
-    @RequestMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @RequestMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ApiOperation(value = "文件上传", notes = "请选择文件上传")
-
-    public String imageUpload(@ApiParam(value = "文件上传", required = true) MultipartFile file) throws Exception {
+    public String fileUpload(@ApiParam(value = "文件上传", required = true) MultipartFile file) throws Exception {
         return uploadFeignService.fileUpload(file);
     }
 }

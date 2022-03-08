@@ -23,7 +23,7 @@ public interface FileUploadFeignService {
      * @return
      */
     @RequestMapping(value = "uploadFile/server", method = RequestMethod.POST,
-            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = MediaType.APPLICATION_JSON_UTF8_VALUE,
             consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     String fileUpload(@RequestPart(value = "file") MultipartFile file);
 }
