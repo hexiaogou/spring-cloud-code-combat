@@ -18,6 +18,9 @@
         <module>provider</module>
         <module>feign-upload-client</module>
         <module>feign-file-server</module>
+        <module>venus-feign-consumer</module>
+        <module>venus-feign-provider</module>
+        <module>venus-feign-provider-client</module>
     </modules>
 
     <properties>
