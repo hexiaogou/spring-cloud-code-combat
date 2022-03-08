@@ -30,4 +30,13 @@ public interface UserFeignService {
      */
     @RequestMapping(value = "/user/add", method = RequestMethod.POST)
     String addUser(UserDTO user);
+
+
+    /**
+     * oauth token search user
+     * @param user
+     * @return
+     */
+    @RequestMapping(value = "/user/oauthTokenSearch", method = RequestMethod.GET)
+    String oauthTokenSearchUser(UserDTO user);
 }

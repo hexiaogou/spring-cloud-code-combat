@@ -31,7 +31,6 @@ public class FeignRequestInterceptor implements RequestInterceptor {
                 Map<String, Collection<String>> queries = new HashMap<>();
                 buildQuery(jsonNode, "", queries);
                 template.queries(queries);
-                System.out.println(jsonNode);
             } catch (IOException e) {
                 e.printStackTrace();
             }

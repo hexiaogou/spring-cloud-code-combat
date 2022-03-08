@@ -27,4 +27,9 @@ public class UserController {
     public String addUser(@RequestBody @ApiParam(name = "用户", value = "传入json格式", required = true) UserDTO user) {
         return userFeignService.addUser(user);
     }
+
+    @RequestMapping(value = "/oauthTokenSearch",method = RequestMethod.POST)
+    public String oauthTokenSearch(@RequestBody @ApiParam(name = "用户", value = "传入json格式", required = true) UserDTO user) {
+        return userFeignService.oauthTokenSearchUser(user);
+    }
 }
