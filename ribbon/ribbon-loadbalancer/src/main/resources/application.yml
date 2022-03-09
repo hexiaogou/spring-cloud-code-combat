@@ -9,3 +9,13 @@ eureka:
       defaultZone: http://127.0.0.1:8888/eureka/
   instance:
     prefer-ip-address: true
+
+ribbon-client-a:
+  ribbon:
+    NFLoadbalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+ribbon:
+  eager-load:
+    enabled: true
+    clients: clinet-a
+  eureka:
+    enabled: false
