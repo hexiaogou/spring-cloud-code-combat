@@ -19,5 +19,5 @@ management:
         include: hystrix.stream
 
 turbine:
-  appcConfig: hystrix-hello,hystrix-producer
+  app-config: hystrix-hello,hystrix-producer
   clusterNameExpression: "'default'"
