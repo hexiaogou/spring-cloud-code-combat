@@ -13,6 +13,10 @@
         <module>hystrix-eureka-server</module>
         <module>hystrix-feign-consumer</module>
         <module>hystrix-feign-producer</module>
+        <module>hystrix-hello</module>
+        <module>hystrix-producer</module>
+        <module>hystrix-dashboard</module>
+        <module>hystrix-turbine</module>
     </modules>
 
     <properties>
