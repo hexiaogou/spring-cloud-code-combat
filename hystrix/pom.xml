@@ -17,6 +17,7 @@
         <module>hystrix-producer</module>
         <module>hystrix-dashboard</module>
         <module>hystrix-turbine</module>
+        <module>hystrix-exception</module>
     </modules>
 
     <properties>
