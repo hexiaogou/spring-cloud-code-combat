@@ -18,6 +18,7 @@
         <module>hystrix-dashboard</module>
         <module>hystrix-turbine</module>
         <module>hystrix-exception</module>
+        <module>hystrix-cache</module>
     </modules>
 
     <properties>

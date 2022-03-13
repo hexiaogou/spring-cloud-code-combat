@@ -1,9 +1,9 @@
 package com.jie.controller;
 
 import com.jie.service.ConsumerService;
+import com.jie.vo.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,5 +30,17 @@ public class ProviderController {
     @GetMapping(value = "helloService")
     public String helloService() {
         return consumerService.helloService();
+    }
+
+
+    @RequestMapping(value = "/getUser/{id}",method = RequestMethod.GET)
+    public User getUser(@PathVariable(value = "id") Integer id){
+        System.out.println("ProviderController id is:"+id);
+        if (id == 1) {
+            return new User("Toy", "123456", 10);
+        } else if (id == 2) {
+            return new User("Sky", "000000", 20);
+        }
+        return new User("San", "543210", 30);
     }
 }
