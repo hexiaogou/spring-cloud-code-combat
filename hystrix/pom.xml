@@ -19,6 +19,7 @@
         <module>hystrix-turbine</module>
         <module>hystrix-exception</module>
         <module>hystrix-cache</module>
+        <module>hystrix-collapser</module>
     </modules>
 
     <properties>
