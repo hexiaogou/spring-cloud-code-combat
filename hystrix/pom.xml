@@ -20,6 +20,7 @@
         <module>hystrix-exception</module>
         <module>hystrix-cache</module>
         <module>hystrix-collapser</module>
+        <module>hystrix-thread-context</module>
     </modules>
 
     <properties>
