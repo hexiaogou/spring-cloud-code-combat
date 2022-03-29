@@ -21,6 +21,7 @@
         <module>hystrix-cache</module>
         <module>hystrix-collapser</module>
         <module>hystrix-thread-context</module>
+        <module>hystrix-threadcontext-test</module>
     </modules>
 
     <properties>
