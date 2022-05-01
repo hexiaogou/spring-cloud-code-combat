@@ -13,8 +13,11 @@ eureka:
     prefer-ip-address: true
 
 zuul:
+  prefix: /pre
   routes:
     eureka-a:
       path: /client/**
       serviceId: eureka-client
-
+    eureka-b:
+      path: /client_another/**
+      url: forward:/client_another
