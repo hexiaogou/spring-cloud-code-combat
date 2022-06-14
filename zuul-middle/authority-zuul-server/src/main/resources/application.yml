@@ -1,0 +1,35 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: authority-zuul-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8888}/eureka/
+  instance:
+    prefer-ip-address: true
+
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    authority-zuul-client:
+      path: /client/**
+      serviceId: authority-zuul-client
+
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:7777/uaa/oauth/token #TOKEN ENDPOINT
+      user-authorization-uri: http://localhost:7777/uaa/oauth/authorize # AUTHORIZE ENPOINT
+      client-id: authority-zuul-server
+      client-secret: secret
+    resource:
+      jwt:
+        key-value: spring_cloud123
+
+logging:
+  level:
+    root: DEBUG
