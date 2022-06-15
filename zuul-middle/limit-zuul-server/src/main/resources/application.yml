@@ -1,0 +1,36 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: limit-zuul-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8888}/eureka/
+  instance:
+    prefer-ip-address: true
+
+zuul:
+  routes:
+    limit-zuul-client:
+      path: /client/**
+      serviceId: limit-zuul-client
+  ratelimit:
+    key-prefix: spring-cloud-book
+    enabled: true
+    repository: IN_MEMORY
+    behind-proxy: true
+    default-policy:
+      limit: 2
+      quota: 1
+      refresh-interval: 3
+      type:
+        - user
+        - origin
+        - url
+
+logging:
+  level:
+    root: INFO

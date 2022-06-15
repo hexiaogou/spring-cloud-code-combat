@@ -16,6 +16,8 @@
         <module>authority-zuul-server</module>
         <module>authority-auth-server</module>
         <module>authority-zuul-client</module>
+        <module>limit-zuul-server</module>
+        <module>limit-zuul-client</module>
     </modules>
 
     <properties>
