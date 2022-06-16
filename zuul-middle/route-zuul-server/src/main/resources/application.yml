@@ -1,0 +1,26 @@
+server:
+  port: 5555
+
+
+spring:
+  application:
+    name: route-zuul-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password:
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8888}/eureka/
+  instance:
+    prefer-ip-address: true
+
+ribbon:
+  eureka:
+    enabled: true
+
+logging:
+  level:
+    root: DEBUG

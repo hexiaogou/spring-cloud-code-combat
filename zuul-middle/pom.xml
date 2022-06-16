@@ -18,6 +18,8 @@
         <module>authority-zuul-client</module>
         <module>limit-zuul-server</module>
         <module>limit-zuul-client</module>
+        <module>route-zuul-server</module>
+        <module>route-zuul-client</module>
     </modules>
 
     <properties>
