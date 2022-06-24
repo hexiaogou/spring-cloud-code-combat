@@ -22,6 +22,8 @@
         <module>route-zuul-client</module>
         <module>gray-zuul-server</module>
         <module>gray-zuul-client</module>
+        <module>file-zuul-server</module>
+        <module>file-zuul-client</module>
     </modules>
 
     <properties>
