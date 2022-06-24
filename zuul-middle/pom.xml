@@ -20,6 +20,8 @@
         <module>limit-zuul-client</module>
         <module>route-zuul-server</module>
         <module>route-zuul-client</module>
+        <module>gray-zuul-server</module>
+        <module>gray-zuul-client</module>
     </modules>
 
     <properties>
