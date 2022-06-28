@@ -1,0 +1,46 @@
+server:
+  port: 5555
+
+spring:
+  application:
+    name: tip-zuul-server
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.host:127.0.0.1}:${eureka.port:8888}/eureka/
+  instance:
+    prefer-ip-address: true
+management:
+  security:
+    enabled: false
+
+zuul:
+  ribbon:
+    eager-load:
+      enabled: true
+  retryable: true
+  routes:
+    tip-zuul-client:
+      path: /client/**
+      serviceId: tip-zuul-client
+
+ribbon:
+  http:
+    client:
+      enabled: false
+  okhttp:
+    enabled: true
+  ConnectTimeOut: 3000
+  ReadTimeOut: 6000
+  MaxAutoRetries: 1
+  NaxAutoRetriesNextServer: 1
+  OkToRetryOnAllOperations: true
+
+logging:
+  level:
+    root: DEBUG

@@ -24,6 +24,8 @@
         <module>gray-zuul-client</module>
         <module>file-zuul-server</module>
         <module>file-zuul-client</module>
+        <module>tip-zuul-server</module>
+        <module>tip-zuul-client</module>
     </modules>
 
     <properties>
